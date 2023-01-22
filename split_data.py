@@ -2,8 +2,8 @@ import os
 import shutil
 
 
-output_path = 'voc_dataset_output/'
-data_path = 'voc_dataset_original/'
+output_path = 'watermark/'
+data_path = 'watermark_original/'
 paths = ['train', 'test', 'valid']
 
 try:
@@ -25,7 +25,6 @@ for path in paths:
     imagepath = os.path.join(data_path, path) + '/JPEGImages/'
     txtsavepath = output_path + '/ImageSets/Main/'
     total_xml = os.listdir(xmlfilepath)
-
 
     file = open(txtsavepath + path + '.txt', 'w')
     for line in total_xml:
